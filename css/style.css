@@ -1,0 +1,262 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@100&display=swap");
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+ul,ol,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    outline: 0;
+    color: black;
+}
+
+header{
+    width: 100%;
+    height: 11vh;
+    position: relative;
+    margin-top: 5vh;
+    
+}
+
+header div.logo{
+    position: absolute;
+    width: 10%;
+    height: 100%;
+    margin: 0px 10px;
+    
+    background-image: url('../img/logo.jpg');
+    background-size: 100% 100%;
+    object-fit: cover;
+}
+
+header nav.menu{
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    margin-right: 15px;
+    top: 0px;
+    right: 0px;
+   
+}
+header nav.menu ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+   
+
+}
+header nav.menu ul li {
+   padding: 35px;
+   margin-right: 5px;
+   display: flex;
+}
+header nav.menu ul li::after {
+
+    content: "";
+    width: 2px;
+    height: 35px;
+    background-color:rgb(119, 136, 153,0.8);    
+    transform: translateX(33px);
+}
+ 
+header nav.menu ul li h2{
+
+    font-family: "arial";
+    color: grey;
+}
+
+main{
+
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    overflow: scroll;
+    background: linear-gradient(45deg,rgba(199, 196, 196, 0.616),rgb(150, 165, 170));
+}
+main div.back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-image: url('../img/tkd.png');
+    background-size: contain;
+    opacity: 0.7;
+}
+main figure.MainImg{
+    position: relative;
+    width: 50vw;
+    height: 40vh;
+    margin-top: 15px;
+    margin-left: 25%;
+    background-color: rgba(0,0,0,0.5);
+    overflow: hidden;
+}
+main figure.MainImg span.btnPrev{
+
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    margin-top: -40px;
+    z-index: 7;
+}
+main figure.MainImg span.btnNext{
+
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    right: 0px;
+    margin-top: -40px;
+    z-index: 7;
+ 
+
+}
+main figure.MainImg span.btnPrev i ,main figure.MainImg span.btnNext i {
+    font-size: 50px;
+    opacity: 0.4;
+    transform: translate(7px,2px);
+    transition: opacity 0.5s
+}
+
+main figure.MainImg span.btnPrev:hover i,main figure.MainImg span.btnNext:hover i{
+   opacity: 1;
+}
+
+main figure div#img1{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    background-image: url('../img/img1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: 2s;
+  
+}
+main figure div#img2{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    margin-left: 50vw;
+    background-image: url('../img/img2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: rgba(0,0,0,0.5);
+    transition: 2s;
+}
+main figure div#img3{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    margin-left: 100vw;
+    background-image: url('../img/img3.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: rgba(0,0,0,0.5);
+    transition: 2s;
+}
+
+main section.inform{
+
+    width: 100% ;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    
+ 
+
+}
+main section.inform article{
+
+    position: absolute;
+    width: 15%;
+    height: 35%;
+    border: 2px solid green;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: (2px,2px,2px,black);
+  
+}
+
+main section.inform article .inner{
+    width: 100%;
+    height: 100%;
+}
+main section.inform article .inner h2{
+    font-family: "arial";
+    font-size: 24px;
+    font-style:italic;
+    letter-spacing: 1px;
+    color:black;
+    text-align: center;
+    margin-bottom: 10px;
+
+}
+main section.inform article .inner p{
+
+    font-size: 15px;
+    color:rgb(25, 25, 26); 
+    font-family: "arial";
+}
+main section.inform article .inner .close{
+
+        color: black;
+        font-weight: bold;
+        background-color: wheat;
+}
+main section.inform article .inner .close:hover{
+    cursor: pointer;
+}
+
+
+main section.inform article.inform1 {
+
+    opacity: 0;
+    z-index: -1;
+    transform:translate(5vw,0vh);
+    transition: 1s;
+}
+
+main section.inform div.paint{
+    
+
+    width: 25%;
+    height: 20%;
+    background-image: url('../img/paint.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 100px 50px;
+
+}
+main section.inform div.paint:hover{
+    cursor: pointer;
+}
+
+main section.inform div.paint h2{
+    font-family: "궁서체";
+    font-size: 30px;
+    font-style:italic;
+    letter-spacing: 1px;
+    color:#fff;
+    text-align: center;
+    margin-top: 13%;
+   margin-left: -5vw;
+}
